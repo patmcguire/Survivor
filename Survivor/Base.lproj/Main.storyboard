@@ -149,7 +149,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-lQ-ksQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-lQ-ksQ">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -157,6 +157,9 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 </variation>
+                                <connections>
+                                    <action selector="startEditingTxtField:" destination="io9-0K-yXP" eventType="editingDidBegin" id="M5l-HZ-dre"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWz-7D-o8p">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -165,7 +168,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goBtn:" destination="io9-0K-yXP" eventType="touchUpInside" id="ASW-1c-mtG"/>
-                                    <segue destination="Hml-DG-S1U" kind="show" id="WJT-iq-YZv"/>
+                                    <segue destination="Hml-DG-S1U" kind="show" identifier="GoToPlayerHome" id="WJT-iq-YZv"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -19,6 +19,10 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var passwordTxtField: UITextField!
     
+    let parseClass = "sosltice1"
+    
+    var chosenPlayer = ""
+    
     var players: [String] = []
     
     //["Pat McGuire", "Jillian Offutt", "Dustin Vorac", "Andrea Miller", "Ryan Phillips", "Andy Sheehan", "Sampath Kunta", "Ellie Morrison", "Alec Nathan", "J"]
@@ -35,7 +39,7 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         
         for i in 1...20{
-            var query = PFQuery(className: "sosltice1")
+            var query = PFQuery(className: parseClass)
             query.whereKey("playerId", equalTo: i)
             if var player = query.getFirstObject(){
                 var playerName = player["playerName"] as! String
@@ -43,9 +47,9 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
         
-        for i in 0...(players.count - 1){
-            println(players[i])
-        }
+//        for i in 0...(players.count - 1){
+//            println(players[i])
+//        }
         
     }
         
@@ -72,14 +76,44 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let row = indexPath.row
         println(players[row])
+        chosenPlayer = players[row]
         whoYouAreLbl.text = players[row]
     }
     
     
     @IBAction func goBtn(sender: AnyObject) {
+        passwordTxtField.endEditing(true)
         
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if identifier == "GoToPlayerHome" {
+            var requiredPass = ""
+            var enteredPass: String = passwordTxtField.text
+            
+            var query = PFQuery(className: parseClass)
+            query.whereKey("playerName", equalTo: chosenPlayer)
+            if var player = query.getFirstObject(){
+                requiredPass = player["password"] as! String
+            }
+            
+            if requiredPass == enteredPass{
+                return true
+            } else {
+                passwordTxtField.textColor = UIColor.redColor()
+                passwordTxtField.secureTextEntry = false
+                passwordTxtField.text = "Incorrect Password"
+                return false
+            }
+        }
         
-        
+        return false
+    }
+    
+    @IBAction func startEditingTxtField(sender: AnyObject) {
+        passwordTxtField.text = ""
+        passwordTxtField.textColor = UIColor.blackColor()
+        passwordTxtField.secureTextEntry = true
     }
     
         
