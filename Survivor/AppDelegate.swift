@@ -15,6 +15,8 @@ import Bolts
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -26,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientKey: "k6B9RwdU0oWWIeIzy9bXyxHSGICy8oaROR4gYyxc")
         
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        //Setting the parse class as a default until there is a reason to have two games going at once. If you need to have two games going at once then set this default after the user selects their game.
+        defaults.setObject("sosltice1", forKey: "gameClass")
         
         return true
     }

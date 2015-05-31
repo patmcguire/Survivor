@@ -19,11 +19,14 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var passwordTxtField: UITextField!
     
-    let parseClass = "sosltice1"
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    var parseClass = ""
     
     var chosenPlayer = ""
     
     var players: [String] = []
+    
     
     //["Pat McGuire", "Jillian Offutt", "Dustin Vorac", "Andrea Miller", "Ryan Phillips", "Andy Sheehan", "Sampath Kunta", "Ellie Morrison", "Alec Nathan", "J"]
     
@@ -31,6 +34,10 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let classAvail = defaults.stringForKey("gameClass"){
+            parseClass = classAvail
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -75,7 +82,6 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        println(players[row])
         chosenPlayer = players[row]
         whoYouAreLbl.text = players[row]
     }
@@ -98,6 +104,7 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
             
             if requiredPass == enteredPass{
+                defaults.setObject(chosenPlayer, forKey: "PlayerName")
                 return true
             } else {
                 passwordTxtField.textColor = UIColor.redColor()
