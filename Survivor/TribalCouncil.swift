@@ -25,6 +25,9 @@ class TribalCouncil: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     var immunity = ""
     
+    @IBOutlet var immunityLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         
         if let classAvail = defaults.stringForKey("gameClass"){
@@ -37,6 +40,7 @@ class TribalCouncil: UIViewController, UITableViewDataSource, UITableViewDelegat
         tableView.dataSource = self
         
         selectedPlyrLbl.text = ""
+        immunityLbl.text = ""
         
         var query = PFQuery(className: parseClass)
         query.whereKey("Tribal", equalTo: true)
@@ -53,6 +57,7 @@ class TribalCouncil: UIViewController, UITableViewDataSource, UITableViewDelegat
             
             if immunity != "" {
                 println("\(immunity) has an immunity idol.")
+                immunityLbl.text = "\(immunity) has immunity."
             } else {
                 println("No one has immunity on this tribe")
             }

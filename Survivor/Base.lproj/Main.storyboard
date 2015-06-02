@@ -530,16 +530,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="16" y="508" width="65" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcm-gi-wFd">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="89" y="508" width="295" height="21"/>
+                                    <rect key="frame" x="16" y="537" width="74" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpG-GC-vv4">
@@ -548,11 +539,26 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Immunity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD5-lf-Zpe">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcm-gi-wFd">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="91" y="537" width="293" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="x83-Ba-wMP" firstAttribute="leading" secondItem="KoT-4N-Ank" secondAttribute="leadingMargin" constant="-16" id="8W6-6Z-EFn"/>
-                            <constraint firstItem="x83-Ba-wMP" firstAttribute="top" secondItem="cRT-bh-qhm" secondAttribute="bottom" constant="8" id="A6F-NJ-TPW"/>
+                            <constraint firstAttribute="centerX" secondItem="SD5-lf-Zpe" secondAttribute="centerX" constant="-0.5" id="Ag8-vV-fdi"/>
                             <constraint firstItem="hcm-gi-wFd" firstAttribute="trailing" secondItem="KoT-4N-Ank" secondAttribute="trailingMargin" id="GAd-X1-SSs"/>
                             <constraint firstItem="hcm-gi-wFd" firstAttribute="top" secondItem="x83-Ba-wMP" secondAttribute="bottom" constant="8" id="Itq-Fr-T3C"/>
                             <constraint firstItem="inw-gl-JJG" firstAttribute="top" secondItem="x83-Ba-wMP" secondAttribute="bottom" constant="8" id="Nb0-o7-3ev"/>
@@ -561,6 +567,8 @@
                             <constraint firstAttribute="centerX" secondItem="bpG-GC-vv4" secondAttribute="centerX" constant="-0.5" id="WkR-ZQ-DXx"/>
                             <constraint firstItem="bpG-GC-vv4" firstAttribute="top" secondItem="inw-gl-JJG" secondAttribute="bottom" constant="8" id="amA-9a-FIR"/>
                             <constraint firstAttribute="centerX" secondItem="cRT-bh-qhm" secondAttribute="centerX" id="cHp-cH-AER"/>
+                            <constraint firstItem="SD5-lf-Zpe" firstAttribute="top" secondItem="cRT-bh-qhm" secondAttribute="bottom" constant="8" id="e0a-K4-IbG"/>
+                            <constraint firstItem="x83-Ba-wMP" firstAttribute="top" secondItem="SD5-lf-Zpe" secondAttribute="bottom" constant="8" id="gC6-BC-mVl"/>
                             <constraint firstItem="cRT-bh-qhm" firstAttribute="top" secondItem="PBJ-Ib-Gsj" secondAttribute="bottom" constant="8" id="hnt-DR-JZW"/>
                             <constraint firstItem="inw-gl-JJG" firstAttribute="leading" secondItem="KoT-4N-Ank" secondAttribute="leadingMargin" id="iQz-bs-kIy"/>
                             <constraint firstAttribute="centerX" secondItem="x83-Ba-wMP" secondAttribute="centerX" id="ui0-8o-1ak"/>
@@ -570,23 +578,26 @@
                                 <exclude reference="cRT-bh-qhm"/>
                                 <exclude reference="x83-Ba-wMP"/>
                                 <exclude reference="inw-gl-JJG"/>
-                                <exclude reference="hcm-gi-wFd"/>
                                 <exclude reference="bpG-GC-vv4"/>
+                                <exclude reference="SD5-lf-Zpe"/>
+                                <exclude reference="hcm-gi-wFd"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="cHp-cH-AER"/>
                                 <exclude reference="hnt-DR-JZW"/>
                                 <exclude reference="8W6-6Z-EFn"/>
-                                <exclude reference="A6F-NJ-TPW"/>
                                 <exclude reference="OWx-CZ-2AU"/>
+                                <exclude reference="gC6-BC-mVl"/>
                                 <exclude reference="ui0-8o-1ak"/>
+                                <exclude reference="Ag8-vV-fdi"/>
+                                <exclude reference="e0a-K4-IbG"/>
                                 <exclude reference="Nb0-o7-3ev"/>
                                 <exclude reference="iQz-bs-kIy"/>
+                                <exclude reference="WkR-ZQ-DXx"/>
+                                <exclude reference="amA-9a-FIR"/>
                                 <exclude reference="GAd-X1-SSs"/>
                                 <exclude reference="Itq-Fr-T3C"/>
                                 <exclude reference="SOa-aD-dC8"/>
-                                <exclude reference="WkR-ZQ-DXx"/>
-                                <exclude reference="amA-9a-FIR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -594,27 +605,31 @@
                                 <include reference="cRT-bh-qhm"/>
                                 <include reference="x83-Ba-wMP"/>
                                 <include reference="inw-gl-JJG"/>
-                                <include reference="hcm-gi-wFd"/>
                                 <include reference="bpG-GC-vv4"/>
+                                <include reference="SD5-lf-Zpe"/>
+                                <include reference="hcm-gi-wFd"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="cHp-cH-AER"/>
                                 <include reference="hnt-DR-JZW"/>
                                 <include reference="8W6-6Z-EFn"/>
-                                <include reference="A6F-NJ-TPW"/>
                                 <include reference="OWx-CZ-2AU"/>
+                                <include reference="gC6-BC-mVl"/>
                                 <include reference="ui0-8o-1ak"/>
+                                <include reference="Ag8-vV-fdi"/>
+                                <include reference="e0a-K4-IbG"/>
                                 <include reference="Nb0-o7-3ev"/>
                                 <include reference="iQz-bs-kIy"/>
+                                <include reference="WkR-ZQ-DXx"/>
+                                <include reference="amA-9a-FIR"/>
                                 <include reference="GAd-X1-SSs"/>
                                 <include reference="Itq-Fr-T3C"/>
                                 <include reference="SOa-aD-dC8"/>
-                                <include reference="WkR-ZQ-DXx"/>
-                                <include reference="amA-9a-FIR"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="immunityLbl" destination="SD5-lf-Zpe" id="goF-To-zbL"/>
                         <outlet property="selectedPlyrLbl" destination="hcm-gi-wFd" id="6UW-bC-aDR"/>
                         <outlet property="tableView" destination="x83-Ba-wMP" id="B2P-xw-TdS"/>
                     </connections>
