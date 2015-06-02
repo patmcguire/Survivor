@@ -123,6 +123,11 @@ class WhoAreYou: UIViewController, UITableViewDataSource, UITableViewDelegate {
         passwordTxtField.secureTextEntry = true
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
         
 }
 

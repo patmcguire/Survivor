@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43072E211B1AB6330048963E /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43072E201B1AB6330048963E /* ChangePassword.swift */; };
 		43072E231B1ABE230048963E /* PlayerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43072E221B1ABE230048963E /* PlayerHome.swift */; };
+		43072E251B1D4A670048963E /* TribalCouncil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43072E241B1D4A670048963E /* TribalCouncil.swift */; };
 		43B060DB1B193017004F2B0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B060DA1B193017004F2B0B /* AppDelegate.swift */; };
 		43B060DD1B193017004F2B0B /* ChooseIsland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B060DC1B193017004F2B0B /* ChooseIsland.swift */; };
 		43B060E01B193017004F2B0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B060DE1B193017004F2B0B /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		43072E201B1AB6330048963E /* ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		43072E221B1ABE230048963E /* PlayerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerHome.swift; sourceTree = "<group>"; };
+		43072E241B1D4A670048963E /* TribalCouncil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TribalCouncil.swift; sourceTree = "<group>"; };
 		43B060D51B193017004F2B0B /* Survivor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Survivor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B060D91B193017004F2B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43B060DA1B193017004F2B0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				43B060DA1B193017004F2B0B /* AppDelegate.swift */,
 				43B060DC1B193017004F2B0B /* ChooseIsland.swift */,
+				43072E241B1D4A670048963E /* TribalCouncil.swift */,
 				43B061191B1A0E92004F2B0B /* WhoAreYou.swift */,
 				43072E221B1ABE230048963E /* PlayerHome.swift */,
 				43072E201B1AB6330048963E /* ChangePassword.swift */,
@@ -285,6 +288,7 @@
 				43072E211B1AB6330048963E /* ChangePassword.swift in Sources */,
 				43072E231B1ABE230048963E /* PlayerHome.swift in Sources */,
 				43B0611A1B1A0E92004F2B0B /* WhoAreYou.swift in Sources */,
+				43072E251B1D4A670048963E /* TribalCouncil.swift in Sources */,
 				43B060DD1B193017004F2B0B /* ChooseIsland.swift in Sources */,
 				43B060DB1B193017004F2B0B /* AppDelegate.swift in Sources */,
 			);
