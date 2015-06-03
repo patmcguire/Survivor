@@ -30,6 +30,7 @@
 		43B061111B1931B7004F2B0B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B061101B1931B7004F2B0B /* libsqlite3.dylib */; };
 		43B061181B193523004F2B0B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B061171B193523004F2B0B /* Bolts.framework */; };
 		43B0611A1B1A0E92004F2B0B /* WhoAreYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B061191B1A0E92004F2B0B /* WhoAreYou.swift */; };
+		43FB7AA51B1EA0F600343830 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB7AA41B1EA0F600343830 /* PlayerList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		43B061101B1931B7004F2B0B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		43B061171B193523004F2B0B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		43B061191B1A0E92004F2B0B /* WhoAreYou.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoAreYou.swift; sourceTree = "<group>"; };
+		43FB7AA41B1EA0F600343830 /* PlayerList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				43B061191B1A0E92004F2B0B /* WhoAreYou.swift */,
 				43072E221B1ABE230048963E /* PlayerHome.swift */,
 				43072E201B1AB6330048963E /* ChangePassword.swift */,
+				43FB7AA41B1EA0F600343830 /* PlayerList.swift */,
 				43B060DE1B193017004F2B0B /* Main.storyboard */,
 				43B060E11B193017004F2B0B /* Images.xcassets */,
 				43B060E31B193017004F2B0B /* LaunchScreen.xib */,
@@ -290,6 +293,7 @@
 				43B0611A1B1A0E92004F2B0B /* WhoAreYou.swift in Sources */,
 				43072E251B1D4A670048963E /* TribalCouncil.swift in Sources */,
 				43B060DD1B193017004F2B0B /* ChooseIsland.swift in Sources */,
+				43FB7AA51B1EA0F600343830 /* PlayerList.swift in Sources */,
 				43B060DB1B193017004F2B0B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
