@@ -17,6 +17,7 @@ class PlayerHome: UIViewController{
     var tribe = ""
     
     @IBOutlet var tribeLbl: UILabel!
+    @IBOutlet var tribalCouncilBtn: UIButton!
     
     
     override func viewDidLoad() {
@@ -33,6 +34,9 @@ class PlayerHome: UIViewController{
         query.whereKey("playerName", equalTo: userName)
         if var player = query.getFirstObject(){
             tribe = player["tribe"] as! String
+            if player["Tribal"] as! Bool == false{
+                tribalCouncilBtn.enabled = false
+            }
         }
         
         if tribe == "tribe1"{

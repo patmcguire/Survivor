@@ -15,6 +15,7 @@ class TribalCouncil: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet var selectedPlyrLbl: UILabel!
     @IBOutlet var tableView: UITableView!
     
+    
     var playersForVoting: [String] = []
     
     let textCellId = "PlayerCell"
